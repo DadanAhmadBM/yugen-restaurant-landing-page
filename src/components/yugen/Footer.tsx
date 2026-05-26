@@ -62,12 +62,12 @@ export function Footer() {
       </div>
 
       {/* Massive closer */}
-      <div className="relative overflow-hidden bg-primary py-12">
+      <div className="relative overflow-hidden bg-primary py-18">
         <p className="text-massive whitespace-nowrap text-center text-primary-foreground/95 px-4">
           YŪGEN · 幽玄
         </p>
         <p className="container-y mt-6 text-center text-xs text-primary-foreground/70">
-          © 2025 Yūgen Restaurant. All Rights Reserved. · Crafted with quiet care.
+          © 2025 Yūgen Restaurant. All Rights Reserved. · Made by Movement.
         </p>
       </div>
     </footer>

@@ -33,7 +33,7 @@ export function Hero() {
       <div className="container-y relative z-10 flex min-h-svh flex-col justify-end pb-16 pt-32 md:pb-24">
         <div className="flex items-end justify-between gap-6">
           <div className="max-w-3xl">
-            <p className="label-caps mb-6 text-gold">Authentic Japanese · Est. 2018</p>
+            <p className="label-caps mb-8 text-gold">Authentic Japanese · Est. 2018</p>
             <h1 className="text-hero text-dark-foreground -ml-1">YŪGEN</h1>
             <div className="mt-4 flex flex-wrap items-baseline gap-4">
               <span className="font-jp text-2xl text-gold md:text-3xl">幽玄</span>
@@ -71,11 +71,11 @@ export function Hero() {
               d="M 100, 100 m -80, 0 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0"
             />
           </defs>
-          <text fill="currentColor" className="fill-gold font-display" style={{ fontSize: "18px", letterSpacing: "4px" }}>
+          <text fill="currentColor" className="fill-gold font-display" style={{ fontSize: "24px", letterSpacing: "6px" }}>
             <textPath href="#circle">YŪGEN · 幽玄 · AUTHENTIC JAPANESE · </textPath>
           </text>
         </svg>
-        <span className="relative z-10 flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground label-caps">
+        <span className="relative z-10 flex h-18 w-18 items-center justify-center rounded-full bg-primary text-primary-foreground label-caps">
           Reserve
         </span>
       </a>
@@ -85,8 +85,8 @@ export function Hero() {
 
 function BookingForm() {
   return (
-    <form className="grid grid-cols-1 gap-3 sm:grid-cols-3" onSubmit={(e) => e.preventDefault()}>
-      <label className="flex flex-col gap-1">
+    <form className="grid grid-cols-1 gap-3 sm:grid-cols-12" onSubmit={(e) => e.preventDefault()}>
+      <label className="flex flex-col gap-1 sm:col-span-3">
         <span className="label-caps text-muted-foreground">Guests</span>
         <select className="h-11 rounded-sm border border-input bg-surface px-3 text-foreground focus:border-primary focus:outline-none">
           {Array.from({ length: 10 }, (_, i) => i + 1).map((n) => (
@@ -95,21 +95,21 @@ function BookingForm() {
           <option value="10+">10+</option>
         </select>
       </label>
-      <label className="flex flex-col gap-1">
+      <label className="flex flex-col gap-1 sm:col-span-5">
         <span className="label-caps text-muted-foreground">Date</span>
         <input
           type="date"
           className="h-11 rounded-sm border border-input bg-surface px-3 text-foreground focus:border-primary focus:outline-none"
         />
       </label>
-      <label className="flex flex-col gap-1">
+      <label className="flex flex-col gap-1 sm:col-span-4">
         <span className="label-caps text-muted-foreground">Time</span>
         <input
           type="time"
           className="h-11 rounded-sm border border-input bg-surface px-3 text-foreground focus:border-primary focus:outline-none"
         />
       </label>
-      <button className="sm:col-span-3 h-11 rounded-sm bg-primary text-primary-foreground label-caps transition-colors hover:bg-secondary">
+      <button className="sm:col-span-12 h-11 rounded-sm bg-primary text-primary-foreground label-caps transition-colors hover:bg-secondary">
         Book a Table →
       </button>
     </form>

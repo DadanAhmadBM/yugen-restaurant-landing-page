@@ -3,7 +3,7 @@ import chef from "@/assets/chef.jpg";
 
 export function Story() {
   return (
-    <section id="story" className="section-y bg-background">
+    <section id="story" className="section-y bg-background reveal">
       <div className="container-y">
         <div className="grid gap-16 md:grid-cols-12 md:gap-12">
           <div className="md:col-span-5">
@@ -13,7 +13,7 @@ export function Story() {
             </h2>
             <a
               href="#"
-              className="mt-10 inline-block rounded-full border border-foreground/30 px-6 py-3 label-caps text-foreground transition-colors hover:border-primary hover:text-primary"
+              className="mt-10 inline-block rounded-full border border-foreground/30 px-6 py-3 label-caps text-foreground transition-colors hover:bg-primary hover:text-primary-foreground hover:border-primary"
             >
               Read More →
             </a>

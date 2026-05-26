@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
 
 const links = [
   { label: "Menu", href: "#menu" },
@@ -29,8 +28,16 @@ export function Navbar() {
     >
       <div className="container-y flex h-20 items-center justify-between">
         <a href="#top" className="flex items-baseline gap-3">
-          <span className="font-display text-2xl tracking-wider text-foreground">YŪGEN</span>
-          <span className="font-jp text-sm text-primary">幽玄</span>
+          <span className={`font-display text-3xl tracking-wider transition-colors ${
+            scrolled ? "text-foreground" : "text-primary-foreground"
+          }`}>
+            YŪGEN
+          </span>
+          <span className={`font-jp text-base transition-colors ${
+            scrolled ? "text-primary" : "text-primary-foreground/80"
+          }`}>
+            幽玄
+          </span>
         </a>
 
         <nav className="hidden items-center gap-10 md:flex">
@@ -38,7 +45,11 @@ export function Navbar() {
             <a
               key={l.href}
               href={l.href}
-              className="label-caps text-foreground/80 transition-colors hover:text-primary"
+              className={`label-caps transition-colors ${
+                scrolled
+                  ? "text-foreground/80 hover:text-primary"
+                  : "text-primary-foreground/80 hover:text-primary-foreground"
+              }`}
             >
               {l.label}
             </a>
@@ -46,12 +57,13 @@ export function Navbar() {
         </nav>
 
         <div className="hidden items-center gap-5 md:flex">
-          <span className="label-caps text-foreground/60">
-            <span className="text-primary">EN</span> / JP
-          </span>
           <a
             href="#book"
-            className="rounded-full border border-primary px-5 py-2 label-caps text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
+            className={`rounded-full border px-5 py-2 label-caps transition-colors ${
+              scrolled
+                ? "border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                : "border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+            }`}
           >
             Reservations
           </a>
@@ -59,10 +71,26 @@ export function Navbar() {
 
         <button
           aria-label="Toggle menu"
-          className="md:hidden text-foreground"
+          className={`md:hidden relative h-10 w-10 flex flex-col justify-center items-center gap-1.5 focus:outline-none transition-colors ${
+            scrolled ? "text-foreground" : "text-primary-foreground"
+          }`}
           onClick={() => setOpen((s) => !s)}
         >
-          {open ? <X size={24} /> : <Menu size={24} />}
+          <span
+            className={`h-0.5 w-6 bg-current rounded-full transition-all duration-300 ${
+              open ? "rotate-45 translate-y-2" : ""
+            }`}
+          />
+          <span
+            className={`h-0.5 w-6 bg-current rounded-full transition-all duration-300 ${
+              open ? "opacity-0" : "opacity-100"
+            }`}
+          />
+          <span
+            className={`h-0.5 w-6 bg-current rounded-full transition-all duration-300 ${
+              open ? "-rotate-45 -translate-y-2" : ""
+            }`}
+          />
         </button>
       </div>
 

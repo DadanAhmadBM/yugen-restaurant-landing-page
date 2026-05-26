@@ -7,12 +7,12 @@ import matcha from "@/assets/gallery-matcha.jpg";
 import yakitori from "@/assets/gallery-yakitori.jpg";
 
 const categories = [
-  { name: "Sushi", jp: "寿司", count: 12, image: nigiri },
-  { name: "Ramen", jp: "ラーメン", count: 6, image: ramen },
-  { name: "Yakitori", jp: "焼き鳥", count: 9, image: yakitori },
-  { name: "Sashimi", jp: "刺身", count: 8, image: sashimi },
+  { name: "Sushi", jp: "寿司", count: 1, image: nigiri },
+  { name: "Ramen", jp: "ラーメン", count: 2, image: ramen },
+  { name: "Yakitori", jp: "焼き鳥", count: 3, image: yakitori },
+  { name: "Sashimi", jp: "刺身", count: 4, image: sashimi },
   { name: "Wagyu", jp: "和牛", count: 5, image: wagyu },
-  { name: "Dessert", jp: "デザート", count: 7, image: matcha },
+  { name: "Dessert", jp: "デザート", count: 6, image: matcha },
 ];
 
 export function Menu() {
@@ -20,7 +20,7 @@ export function Menu() {
   const current = categories[active];
 
   return (
-    <section id="menu" className="section-y bg-surface">
+    <section id="menu" className="section-y bg-surface reveal">
       <div className="container-y">
         <div className="mb-16 flex flex-wrap items-end justify-between gap-6">
           <div>
@@ -67,7 +67,7 @@ export function Menu() {
 
             <a
               href="#"
-              className="mt-10 inline-block rounded-full border border-foreground/30 px-6 py-3 label-caps transition-colors hover:border-primary hover:text-primary"
+              className="mt-10 inline-block rounded-full border border-foreground/30 px-6 py-3 label-caps transition-colors hover:bg-primary hover:text-primary-foreground hover:border-primary"
             >
               See Full Menu ↗
             </a>

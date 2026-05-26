@@ -10,7 +10,7 @@ const values = [
 
 export function WhyChoose() {
   return (
-    <section className="relative overflow-hidden bg-dark">
+    <section className="relative overflow-hidden bg-dark reveal">
       <img src={bg} alt="" aria-hidden loading="lazy" className="absolute inset-0 h-full w-full object-cover opacity-30" />
       <div className="absolute inset-0 bg-dark/80" />
 

@@ -9,7 +9,7 @@ const hours = [
 
 export function Location() {
   return (
-    <section id="location" className="relative overflow-hidden">
+    <section id="location" className="relative overflow-hidden reveal">
       <img
         src={exterior}
         alt="Yūgen exterior at dusk"

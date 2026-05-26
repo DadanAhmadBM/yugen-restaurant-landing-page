@@ -34,7 +34,7 @@ export function Signature() {
         return (
           <article
             key={d.name}
-            className="grid min-h-[80vh] grid-cols-1 md:grid-cols-2"
+            className="grid min-h-[80vh] grid-cols-1 md:grid-cols-2 reveal"
           >
             <div className={`relative aspect-[4/5] md:aspect-auto ${reverse ? "md:order-2" : ""}`}>
               <img

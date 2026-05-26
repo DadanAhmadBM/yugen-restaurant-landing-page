@@ -7,17 +7,17 @@ import nigiri from "@/assets/dish-nigiri.jpg";
 import ramen from "@/assets/dish-ramen.jpg";
 
 const photos = [
-  { src: sashimi, alt: "Sashimi", h: "tall" },
-  { src: interior, alt: "Interior", h: "short" },
-  { src: yakitori, alt: "Yakitori", h: "tall" },
-  { src: matcha, alt: "Matcha dessert", h: "short" },
-  { src: ramen, alt: "Ramen", h: "tall" },
-  { src: nigiri, alt: "Nigiri", h: "short" },
+  { src: sashimi, alt: "Sashimi", bento: "sm:col-span-2 md:col-span-2 md:row-span-1 aspect-[2/1] md:aspect-auto h-full" },
+  { src: interior, alt: "Interior", bento: "sm:col-span-1 md:col-span-1 md:row-span-1 aspect-square md:aspect-auto h-full" },
+  { src: yakitori, alt: "Yakitori", bento: "sm:col-span-1 md:col-span-1 md:row-span-1 aspect-[4/3] md:aspect-auto h-full" },
+  { src: matcha, alt: "Matcha dessert", bento: "sm:col-span-1 md:col-span-1 md:row-span-2 aspect-[3/4] md:aspect-auto h-full" },
+  { src: ramen, alt: "Ramen", bento: "sm:col-span-1 md:col-span-1 md:row-span-2 aspect-[3/4] md:aspect-auto h-full" },
+  { src: nigiri, alt: "Nigiri", bento: "sm:col-span-1 md:col-span-1 md:row-span-1 aspect-[4/3] md:aspect-auto h-full" },
 ];
 
 export function ChefQuote() {
   return (
-    <section id="gallery" className="section-y bg-surface">
+    <section id="gallery" className="section-y bg-surface reveal">
       <div className="container-y">
         <div className="mx-auto max-w-3xl text-center">
           <img
@@ -35,14 +35,11 @@ export function ChefQuote() {
           </blockquote>
         </div>
 
-        <div className="mt-24 grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-6">
+        <div className="mt-24 mx-auto max-w-5xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 md:grid-rows-[350px_213px_213px] gap-4 md:gap-6">
           {photos.map((p, i) => (
-            <a
+            <div
               key={i}
-              href={p.src}
-              className={`group relative overflow-hidden rounded-sm ${
-                p.h === "tall" ? "aspect-[3/4]" : "aspect-[4/3]"
-              }`}
+              className={`group relative overflow-hidden shadow-md transition-all duration-500 hover:-translate-y-1 hover:shadow-xl ${p.bento}`}
             >
               <img
                 src={p.src}
@@ -50,12 +47,7 @@ export function ChefQuote() {
                 loading="lazy"
                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 flex items-center justify-center bg-primary/0 transition-colors duration-300 group-hover:bg-primary/60">
-                <span className="text-3xl text-primary-foreground opacity-0 transition-opacity group-hover:opacity-100">
-                  +
-                </span>
-              </div>
-            </a>
+            </div>
           ))}
         </div>
       </div>
