@@ -10,19 +10,19 @@ const values = [
 
 export function WhyChoose() {
   return (
-    <section className="relative overflow-hidden bg-dark reveal">
+    <section className="relative overflow-hidden bg-dark">
       <img src={bg} alt="" aria-hidden loading="lazy" className="absolute inset-0 h-full w-full object-cover opacity-30" />
       <div className="absolute inset-0 bg-dark/80" />
 
       <div className="container-y relative z-10 section-y">
-        <div className="mb-16 max-w-2xl">
+        <div className="mb-16 max-w-2xl reveal">
           <p className="label-caps text-gold">Why Yūgen / 選ばれる理由</p>
           <h2 className="text-section mt-4 text-dark-foreground">Why Yūgen?</h2>
         </div>
 
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4 reveal-stagger">
           {values.map(({ Icon, title, desc }) => (
-            <div key={title} className="group">
+            <div key={title} className="group reveal">
               <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-full border border-gold/50 text-gold transition-colors group-hover:bg-gold group-hover:text-dark">
                 <Icon size={24} strokeWidth={1.5} />
               </div>

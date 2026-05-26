@@ -34,9 +34,9 @@ export function Signature() {
         return (
           <article
             key={d.name}
-            className="grid min-h-[80vh] grid-cols-1 md:grid-cols-2 reveal"
+            className="grid min-h-[80vh] grid-cols-1 md:grid-cols-2"
           >
-            <div className={`relative aspect-[4/5] md:aspect-auto ${reverse ? "md:order-2" : ""}`}>
+            <div className={`relative aspect-[4/5] md:aspect-auto reveal ${reverse ? "reveal-left md:order-2" : "reveal-right"}`}>
               <img
                 src={d.img}
                 alt={d.name}
@@ -44,7 +44,7 @@ export function Signature() {
                 className="h-full w-full object-cover"
               />
             </div>
-            <div className={`flex items-center bg-background ${reverse ? "md:order-1" : ""}`}>
+            <div className={`flex items-center bg-background reveal ${reverse ? "reveal-right md:order-1" : "reveal-left"} delay-200`}>
               <div className="container-y w-full py-16 md:py-24">
                 <p className="label-caps text-primary">Signature Dish · 看板料理</p>
                 <h3 className="text-section mt-6">{d.name.toUpperCase()}</h3>

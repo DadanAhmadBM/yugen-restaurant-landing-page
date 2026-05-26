@@ -32,26 +32,26 @@ export function Testimonials() {
   }, []);
 
   return (
-    <section className="section-y bg-background reveal">
+    <section className="section-y bg-background">
       <div className="container-y">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="label-caps text-primary">Guest Voices / お客様の声</p>
+          <p className="label-caps text-primary reveal">Guest Voices / お客様の声</p>
           <div className="mt-8 flex justify-center gap-1 text-gold">
             {Array.from({ length: 5 }).map((_, k) => (
               <Star key={k} size={18} fill="currentColor" strokeWidth={0} />
             ))}
           </div>
 
-          <blockquote className="mt-8 min-h-[200px] font-serif text-2xl italic leading-relaxed text-foreground md:text-3xl">
+          <blockquote className="mt-8 min-h-[200px] font-serif text-2xl italic leading-relaxed text-foreground md:text-3xl reveal delay-200">
             "{review.quote}"
           </blockquote>
 
-          <div className="mt-10">
+          <div className="mt-10 reveal delay-300">
             <p className="font-display text-2xl text-foreground">{review.name}</p>
             <p className="label-caps text-muted-foreground">{review.desc}</p>
           </div>
 
-          <div className="mt-12 flex items-center justify-center gap-6">
+          <div className="mt-12 flex items-center justify-center gap-6 reveal delay-400">
             <button
               onClick={() => setI((v) => (v - 1 + reviews.length) % reviews.length)}
               className="rounded-full border border-border p-3 text-foreground transition-colors hover:border-primary hover:text-primary"

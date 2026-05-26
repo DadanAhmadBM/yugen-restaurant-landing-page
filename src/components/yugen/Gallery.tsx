@@ -17,9 +17,9 @@ const photos = [
 
 export function ChefQuote() {
   return (
-    <section id="gallery" className="section-y bg-surface reveal">
+    <section id="gallery" className="section-y bg-surface">
       <div className="container-y">
-        <div className="mx-auto max-w-3xl text-center">
+        <div className="mx-auto max-w-3xl text-center reveal reveal-scale">
           <img
             src={chef}
             alt="Head Itamae"
@@ -35,11 +35,11 @@ export function ChefQuote() {
           </blockquote>
         </div>
 
-        <div className="mt-24 mx-auto max-w-5xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 md:grid-rows-[350px_213px_213px] gap-4 md:gap-6">
+        <div className="mt-24 mx-auto max-w-5xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 md:grid-rows-[350px_213px_213px] gap-4 md:gap-6 reveal-stagger">
           {photos.map((p, i) => (
             <div
               key={i}
-              className={`group relative overflow-hidden shadow-md transition-all duration-500 hover:-translate-y-1 hover:shadow-xl ${p.bento}`}
+              className={`group relative overflow-hidden shadow-md transition-all duration-500 hover:-translate-y-1 hover:shadow-xl reveal reveal-scale ${p.bento}`}
             >
               <img
                 src={p.src}

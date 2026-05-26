@@ -4,8 +4,8 @@ export function Footer() {
   return (
     <footer>
       <div className="bg-surface section-y">
-        <div className="container-y grid gap-12 md:grid-cols-4">
-          <div>
+        <div className="container-y grid gap-12 md:grid-cols-4 reveal-stagger">
+          <div className="reveal">
             <p className="font-display text-3xl">YŪGEN <span className="font-jp text-primary text-xl">幽玄</span></p>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
               A traditional Japanese kitchen guided by season, restraint, and the
@@ -24,7 +24,7 @@ export function Footer() {
             </div>
           </div>
 
-          <div>
+          <div className="reveal">
             <p className="label-caps text-primary">Explore</p>
             <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
               {["Home", "Menu", "About", "Gallery", "Reservations"].map((l) => (
@@ -33,7 +33,7 @@ export function Footer() {
             </ul>
           </div>
 
-          <div>
+          <div className="reveal">
             <p className="label-caps text-primary">Cuisine</p>
             <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
               {["Sushi", "Ramen", "Yakitori", "Omakase", "Beverages"].map((l) => (
@@ -42,7 +42,7 @@ export function Footer() {
             </ul>
           </div>
 
-          <div>
+          <div className="reveal">
             <p className="label-caps text-primary">Newsletter</p>
             <form className="mt-4 flex border-b border-foreground/30 pb-2" onSubmit={(e) => e.preventDefault()}>
               <input
@@ -62,7 +62,7 @@ export function Footer() {
       </div>
 
       {/* Massive closer */}
-      <div className="relative overflow-hidden bg-primary py-18">
+      <div className="relative overflow-hidden bg-primary py-18 reveal reveal-scale">
         <p className="text-massive whitespace-nowrap text-center text-primary-foreground/95 px-4">
           YŪGEN · 幽玄
         </p>

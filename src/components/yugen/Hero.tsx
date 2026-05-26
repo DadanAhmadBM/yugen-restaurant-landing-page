@@ -20,7 +20,7 @@ export function Hero() {
       />
 
       {/* Scroll indicator */}
-      <div className="absolute left-6 top-1/2 hidden -translate-y-1/2 items-center gap-3 md:flex">
+      <div className="absolute left-6 top-1/2 hidden -translate-y-1/2 items-center gap-3 md:flex reveal delay-300">
         <span
           className="label-caps text-primary-foreground/70"
           style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
@@ -33,9 +33,9 @@ export function Hero() {
       <div className="container-y relative z-10 flex min-h-svh flex-col justify-end pb-16 pt-32 md:pb-24">
         <div className="flex items-end justify-between gap-6">
           <div className="max-w-3xl">
-            <p className="label-caps mb-8 text-gold">Authentic Japanese · Est. 2018</p>
-            <h1 className="text-hero text-dark-foreground -ml-1">YŪGEN</h1>
-            <div className="mt-4 flex flex-wrap items-baseline gap-4">
+            <p className="label-caps mb-8 text-gold reveal">Authentic Japanese · Est. 2018</p>
+            <h1 className="text-hero text-dark-foreground -ml-1 reveal delay-100">YŪGEN</h1>
+            <div className="mt-4 flex flex-wrap items-baseline gap-4 reveal delay-200">
               <span className="font-jp text-2xl text-gold md:text-3xl">幽玄</span>
               <p className="font-serif italic text-xl text-dark-foreground/85 md:text-2xl">
                 Where every dish tells a story in silence.
@@ -44,13 +44,13 @@ export function Hero() {
           </div>
 
           {/* Booking form */}
-          <div id="book" className="hidden w-full max-w-md shrink-0 rounded-md border border-primary/40 bg-background/95 p-6 backdrop-blur-md lg:block">
+          <div id="book" className="hidden w-full max-w-md shrink-0 rounded-md border border-primary/40 bg-background/95 p-6 backdrop-blur-md lg:block reveal delay-300">
             <p className="label-caps mb-4 text-primary">Reserve a Table</p>
             <BookingForm />
           </div>
         </div>
 
-        <div className="mt-10 lg:hidden">
+        <div className="mt-10 lg:hidden reveal delay-300">
           <div className="rounded-md border border-primary/40 bg-background/95 p-6 backdrop-blur-md">
             <p className="label-caps mb-4 text-primary">Reserve a Table</p>
             <BookingForm />
@@ -61,7 +61,7 @@ export function Hero() {
       {/* Rotating stamp badge */}
       <a
         href="#book"
-        className="absolute bottom-8 right-6 z-10 hidden h-32 w-32 items-center justify-center md:flex"
+        className="absolute bottom-8 right-6 z-10 hidden h-32 w-32 items-center justify-center md:flex reveal delay-500"
         aria-label="Reserve"
       >
         <svg viewBox="0 0 200 200" className="absolute inset-0 h-full w-full animate-spin-slow">

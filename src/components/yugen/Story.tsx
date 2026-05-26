@@ -3,10 +3,10 @@ import chef from "@/assets/chef.jpg";
 
 export function Story() {
   return (
-    <section id="story" className="section-y bg-background reveal">
+    <section id="story" className="section-y bg-background">
       <div className="container-y">
         <div className="grid gap-16 md:grid-cols-12 md:gap-12">
-          <div className="md:col-span-5">
+          <div className="md:col-span-5 reveal reveal-right">
             <p className="label-caps text-primary">Our Story / 私たちの物語</p>
             <h2 className="text-section mt-6 text-foreground">
               A HUMBLE BEGINNING, AN ENDLESS PURSUIT OF FLAVOR.
@@ -19,7 +19,7 @@ export function Story() {
             </a>
           </div>
 
-          <div className="md:col-span-7">
+          <div className="md:col-span-7 reveal reveal-left delay-200">
             <p className="font-serif text-xl leading-relaxed text-muted-foreground md:text-2xl">
               Yūgen began as a single counter beneath a paper lantern in a quiet alley.
               Three generations later, our kitchen still moves to the same unhurried rhythm —
@@ -31,7 +31,7 @@ export function Story() {
               anticipatory care.
             </p>
 
-            <div className="relative mt-12 h-[480px]">
+            <div className="relative mt-12 h-[480px] reveal reveal-scale delay-400">
               <img
                 src={interior}
                 alt="Dining room"

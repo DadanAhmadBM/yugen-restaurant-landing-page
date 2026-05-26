@@ -17,19 +17,35 @@ export function App() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("in");
-            // Stop observing once revealed to retain visible state
+
+            // If it's a stagger container, also add "in" to children
+            if (entry.target.classList.contains("reveal-stagger")) {
+              entry.target.querySelectorAll(".reveal").forEach((child) => {
+                child.classList.add("in");
+              });
+            }
+
             observer.unobserve(entry.target);
           }
         });
       },
-      { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
+      { threshold: 0.08, rootMargin: "0px 0px -60px 0px" }
     );
 
     const elements = document.querySelectorAll(".reveal");
-    elements.forEach((el) => observer.observe(el));
+    elements.forEach((el) => {
+      // Skip children inside a stagger container — the parent handles them
+      if (el.parentElement?.classList.contains("reveal-stagger")) return;
+      observer.observe(el);
+    });
+
+    // Also observe stagger containers themselves
+    const staggerContainers = document.querySelectorAll(".reveal-stagger");
+    staggerContainers.forEach((el) => observer.observe(el));
 
     return () => {
       elements.forEach((el) => observer.unobserve(el));
+      staggerContainers.forEach((el) => observer.unobserve(el));
     };
   }, []);
 

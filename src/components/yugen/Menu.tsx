@@ -20,9 +20,9 @@ export function Menu() {
   const current = categories[active];
 
   return (
-    <section id="menu" className="section-y bg-surface reveal">
+    <section id="menu" className="section-y bg-surface">
       <div className="container-y">
-        <div className="mb-16 flex flex-wrap items-end justify-between gap-6">
+        <div className="mb-16 flex flex-wrap items-end justify-between gap-6 reveal">
           <div>
             <p className="label-caps text-primary">Authentic Menu / お品書き</p>
             <h2 className="text-section mt-4">AUTHENTIC<br />MENU</h2>
@@ -34,7 +34,7 @@ export function Menu() {
         </div>
 
         <div className="grid gap-10 md:grid-cols-12">
-          <div className="md:col-span-5">
+          <div className="md:col-span-5 reveal reveal-right delay-200">
             <ul className="border-t border-border">
               {categories.map((c, i) => {
                 const isActive = i === active;
@@ -73,7 +73,7 @@ export function Menu() {
             </a>
           </div>
 
-          <div className="md:col-span-7">
+          <div className="md:col-span-7 reveal reveal-left delay-300">
             <div className="relative aspect-[4/5] w-full overflow-hidden rounded-sm bg-dark">
               {categories.map((c, i) => (
                 <img
