@@ -20,7 +20,7 @@ export function Menu() {
   const current = categories[active];
 
   return (
-    <section id="menu" className="section-y bg-surface">
+    <section id="menu" className="section-y bg-surface overflow-hidden">
       <div className="container-y">
         <div className="mb-16 flex flex-wrap items-end justify-between gap-6 reveal">
           <div>

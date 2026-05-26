@@ -3,7 +3,7 @@ import chef from "@/assets/chef.jpg";
 
 export function Story() {
   return (
-    <section id="story" className="section-y bg-background">
+    <section id="story" className="section-y bg-background overflow-hidden">
       <div className="container-y">
         <div className="grid gap-16 md:grid-cols-12 md:gap-12">
           <div className="md:col-span-5 reveal reveal-right">

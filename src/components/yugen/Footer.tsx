@@ -3,7 +3,7 @@ import { Instagram, Facebook, Twitter } from "lucide-react";
 export function Footer() {
   return (
     <footer>
-      <div className="bg-surface section-y">
+      <div className="bg-surface section-y overflow-hidden">
         <div className="container-y grid gap-12 md:grid-cols-4 reveal-stagger">
           <div className="reveal">
             <p className="font-display text-3xl">YŪGEN <span className="font-jp text-primary text-xl">幽玄</span></p>

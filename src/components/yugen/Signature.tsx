@@ -28,7 +28,7 @@ const dishes = [
 
 export function Signature() {
   return (
-    <section className="bg-background">
+    <section className="bg-background overflow-hidden">
       {dishes.map((d, i) => {
         const reverse = i % 2 === 1;
         return (

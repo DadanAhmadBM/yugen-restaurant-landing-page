@@ -32,7 +32,7 @@ export function Testimonials() {
   }, []);
 
   return (
-    <section className="section-y bg-background">
+    <section className="section-y bg-background overflow-hidden">
       <div className="container-y">
         <div className="mx-auto max-w-3xl text-center">
           <p className="label-caps text-primary reveal">Guest Voices / お客様の声</p>

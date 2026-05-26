@@ -17,7 +17,7 @@ const photos = [
 
 export function ChefQuote() {
   return (
-    <section id="gallery" className="section-y bg-surface">
+    <section id="gallery" className="section-y bg-surface overflow-hidden">
       <div className="container-y">
         <div className="mx-auto max-w-3xl text-center reveal reveal-scale">
           <img
